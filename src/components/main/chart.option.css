@@ -1,0 +1,21 @@
+caption {
+  font-size: 12px;
+  color: grey;
+}
+
+table {
+  max-width: 960px;
+}
+
+table tbody {
+  margin: 10px 20px;
+}
+
+table tbody tr {
+  height: 40px;
+}
+
+.charts-css.bar:not(.reverse) tbody tr {
+  margin-inline-start: 20px;
+  margin-inline-end: 20px;
+}

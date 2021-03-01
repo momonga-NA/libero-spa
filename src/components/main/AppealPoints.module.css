@@ -1,0 +1,15 @@
+.appeal_img {
+  width: 280px;
+  border-radius: 50%;
+  display: block;
+  margin: 20px auto;
+}
+
+.appeal_title {
+  padding: 5px;
+  display: block;
+  text-align: center;
+  background-color: #3f2806;
+  color: #fff;
+  font-weight: bold;
+}
