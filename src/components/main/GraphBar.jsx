@@ -2,46 +2,19 @@ import React from "react";
 import "../../charts.css";
 import "./chart.option.css";
 
-const style = {
-  fourty: {
-    "--size": 0.4,
-  },
-  sixty: {
-    "--size": 0.6,
-  },
-  eighty: {
-    "--size": 0.8,
-  },
-  ninety: {
-    "--size": 0.9,
-  },
-  one: {
-    "--size": 1.0,
-  },
-};
-
-const GraphBar = () => {
+const GraphBar = ({ graphData }) => {
   return (
     <>
       <div>
-        <table className="charts-css bar show-heading hide-data show-labels">
-          <caption> Front End Developer Salary </caption>
+        <table className="charts-css column show-heading hide-data show-labels animation">
+          <caption>{graphData.title}</caption>
           <tbody>
-            <tr>
-              <td style={style.fourty}> </td>
-            </tr>
-            <tr>
-              <td style={style.sixty}></td>
-            </tr>
-            <tr>
-              <td style={style.eighty}></td>
-            </tr>
-            <tr>
-              <td style={style.ninety}></td>
-            </tr>
-            <tr>
-              <td style={style.one}></td>
-            </tr>
+            {graphData.datas.map((data, index) => (
+              <tr key={index}>
+                <th scope="row">{data.label}</th>
+                <td style={data.number}> </td>
+              </tr>
+            ))}
           </tbody>
         </table>
       </div>

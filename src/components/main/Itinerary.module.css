@@ -1,3 +1,12 @@
 .container {
   margin: 15px 30px;
 }
+
+div.timeline_item span {
+  display: block;
+  line-height: 20px;
+}
+
+div.timeline_item img {
+  width: 100%;
+}

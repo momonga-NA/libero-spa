@@ -25,45 +25,22 @@ const Itinerary = ({ itinerary }) => {
     <>
       <div className={style.container}>
         <Timeline>
-          <TimelineItem>
-            <StyledTimelineOppositeContent />
-            <TimelineSeparator>
-              <TimelineDot />
-              <TimelineConnector />
-            </TimelineSeparator>
-            <StyledTimelineContent>
-              <p>ddd</p>
-            </StyledTimelineContent>
-          </TimelineItem>
-          <TimelineItem>
-            <StyledTimelineOppositeContent />
-            <TimelineSeparator>
-              <TimelineDot />
-              <TimelineConnector />
-            </TimelineSeparator>
-            <StyledTimelineContent>
-              <p>ddd</p>
-            </StyledTimelineContent>
-          </TimelineItem>
-          <TimelineItem>
-            <StyledTimelineOppositeContent />
-            <TimelineSeparator>
-              <TimelineDot />
-              <TimelineConnector />
-            </TimelineSeparator>
-            <StyledTimelineContent>
-              <p>ddd</p>
-            </StyledTimelineContent>
-          </TimelineItem>
-          <TimelineItem>
-            <StyledTimelineOppositeContent />
-            <TimelineSeparator>
-              <TimelineDot />
-            </TimelineSeparator>
-            <StyledTimelineContent>
-              <p>ddd</p>
-            </StyledTimelineContent>
-          </TimelineItem>
+          {itinerary.map((spot, index) => (
+            <TimelineItem key={index}>
+              <StyledTimelineOppositeContent />
+              <TimelineSeparator>
+                <TimelineDot />
+                <TimelineConnector />
+              </TimelineSeparator>
+              <StyledTimelineContent>
+                <div className={style.timeline_item}>
+                  <span>{spot.time}</span>
+                  <span>{spot.location}</span>
+                  {spot.image && <img src={spot.image} alt={spot.location} />}
+                </div>
+              </StyledTimelineContent>
+            </TimelineItem>
+          ))}
         </Timeline>
       </div>
     </>

@@ -1,21 +1,36 @@
 caption {
-  font-size: 12px;
+  font-size: 16px;
   color: grey;
+  line-height: 15px;
 }
 
 table {
   max-width: 960px;
 }
 
-table tbody {
-  margin: 10px 20px;
-}
-
 table tbody tr {
-  height: 40px;
+  height: 200px;
 }
 
 .charts-css.bar:not(.reverse) tbody tr {
-  margin-inline-start: 20px;
-  margin-inline-end: 20px;
+  margin-inline-start: 40px;
+}
+
+.animation tbody {
+  overflow-y: hidden;
+}
+.animation tbody th {
+  background-color: #fff;
+  z-index: 1;
+}
+.animation tbody td {
+  animation: moving-bars 4s linear infinite;
+}
+@keyframes moving-bars {
+  0% {
+    transform: translateY(100%);
+  }
+  15% {
+    transform: translateY(0);
+  }
 }
